@@ -46,10 +46,10 @@
     "vite-plugin-mock": "^2.9.6",
     "vue-tsc": "^0.34.7"
   },
-  "lint-staged": {},
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+  "lint-staged": {
+    "*.{js, jsx, vue, ts, tsx}" : [
+      "npm run lint",
+      "git add"
+    ]
   }
 }
