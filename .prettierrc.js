@@ -1,6 +1,6 @@
 module.exports = {
   useTabs: false,
-  tabWidth: 2,
+  tabWidth: 4,
   semi: false,
   vueIndentScriptAndStyle: true,
   singleQuote: true, // 用单引号

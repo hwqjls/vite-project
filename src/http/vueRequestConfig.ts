@@ -1,6 +1,6 @@
-import { setGlobalOptions } from 'vue-request';
+import {setGlobalOptions} from 'vue-request'
 
 export default setGlobalOptions({
-  manual: true,
-  // ...
-});
+    manual: true,
+    // ...
+})
