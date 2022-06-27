@@ -3,6 +3,8 @@ import vueJsx from "@vitejs/plugin-vue-jsx";
 import legacy from '@vitejs/plugin-legacy'
 import viteCompression from 'vite-plugin-compression'
 import AutoImport from "unplugin-auto-import/vite";
+import postcssImport from "postcss-import"
+import autoprefixer from 'autoprefixer'
 
 // element plus相关包
 import Components from 'unplugin-vue-components/vite'
@@ -68,6 +70,12 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
         scss: {
           additionalData: '@import "@/styles/variables.scss";'
         }
+      },
+      postcss:{
+        plugins:[
+          postcssImport,
+          autoprefixer
+        ]
       }
     },
     server: {
