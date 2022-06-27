@@ -1,4 +1,4 @@
-;(() => {
+export const rem = (() => {
     const baseSize = 16
     function setRem() {
         const scale = document.documentElement.clientWidth / 1920 // 1920为设计稿初始屏幕宽度，可根据需要修改
