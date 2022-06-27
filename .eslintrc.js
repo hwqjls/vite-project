@@ -1,7 +1,8 @@
 module.exports = {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "node": true
     },
     "extends": [
         "eslint:recommended",
@@ -11,7 +12,9 @@ module.exports = {
         /* 找node_modules下eslint-plugin-vue对应的vue3对应的规范 => vue3-strongly-recommended */
         'vue3-strongly-recommended',
         'standard',
-        'vue-global-api'
+        'vue-global-api',
+        'prettier',
+        'plugin:prettier/recommended',
     ],
     "parserOptions": {
         "ecmaVersion": "latest",

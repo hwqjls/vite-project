@@ -38,7 +38,7 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
         // 自动导入vue相关的Api
         imports: ["vue", "vue-router", 'pinia'],
         // 声明文件的存放位置
-        dts: './src/auto-imports.d.ts',
+        dts: './src/types/auto-imports.d.ts',
         eslintrc: {
           enabled: false
         }
@@ -47,7 +47,7 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
         resolvers: [
           ElementPlusResolver(),
         ],
-        dts: './src/components.d.ts'
+        dts: './src/types/components.d.ts'
       }),
       ElementPlus({
         useSource: true
