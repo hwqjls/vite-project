@@ -29,6 +29,7 @@ axios.interceptors.request.use(
     (config: AxiosRequestConfig) => {
         const token = window.sessionStorage.getItem('token')
         if (token) {
+            // @ts-ignore
             config.headers.token = token
         }
         return config
@@ -112,6 +113,7 @@ axios.interceptors.response.use(
     }
 )
 
+// eslint-disable-next-line no-redeclare
 const Http: Http = {
     get(url, params) {
         return new Promise((resolve, reject) => {
