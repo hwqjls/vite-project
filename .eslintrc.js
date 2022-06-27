@@ -7,7 +7,10 @@ module.exports = {
         "eslint:recommended",
         "plugin:vue/essential",
         "plugin:@typescript-eslint/recommended",
-        './.eslintrc-auto-import.json'
+        './.eslintrc-auto-import.json',
+        /* 找node_modules下eslint-plugin-vue对应的vue3对应的规范 => vue3-strongly-recommended */
+        'vue3-strongly-recommended',
+        'standard'
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
