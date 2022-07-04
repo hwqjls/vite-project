@@ -1,6 +1,7 @@
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import legacy from '@vitejs/plugin-legacy'
+import visualizer from 'rollup-plugin-visualizer' //包依赖分析
 import viteCompression from 'vite-plugin-compression'
 import AutoImport from 'unplugin-auto-import/vite'
 import postcssImport from 'postcss-import'
@@ -24,6 +25,12 @@ export default ({command}: ConfigEnv): UserConfigExport => {
         plugins: [
             vue(),
             vueJsx(),
+            visualizer({
+                filename: './node_modules/.cache/visualizer/stats.html',
+                open: true,
+                gzipSize: true,
+                brotliSize: true,
+            }),
             viteCompression({
                 verbose: true,
                 disable: false,
